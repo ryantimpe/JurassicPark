@@ -2,14 +2,13 @@
 # Character paths
 ###
 
-
 library(tidytext)
 library(tidyverse)
 library(stringr)
 
-
 location_map <- read_csv("data/Movie_locations.csv") 
 movie_raw <- readxl::read_xlsx("data/SceneDetail.xlsx")
+char_colors <- read_csv("data/Character_colors.csv")
 
 movie <- movie_raw %>% 
   filter(Scene_Dup != 0 | is.na(Scene_Dup)) %>% 
@@ -56,19 +55,25 @@ character_paths_map <- movie %>%
   ungroup() %>% 
   arrange(Character, T_min) %>% 
   #Better factor for Location
-  mutate(Location = paste(Loc_index, Location),
-         Loc_map = factor(Loc_map, labels = c("Globe", "Isla Nublar", "Visitor Center"))) %>% 
-  mutate(x = jitter(x), y = jitter(y))
+  mutate(Loc_map = factor(Loc_map, labels = c("Globe", "Isla Nublar", "Visitor Center"))) %>% 
+  # mutate(x = jitter(x), y = jitter(y)) %>% 
+  #prepare chart
+  inner_join(char_colors %>% filter(!is.na(Color)))
 
+plot_locations <- character_paths_map %>% 
+  select(Location, Loc_map, x, y) %>% 
+  distinct()
 
-ggplot(character_paths_map %>% filter(Character == "GRANT"), 
-       aes(x = x, y = y,
+ggplot(character_paths_map %>% filter(Character %in% c("GRANT", "ELLIE")), 
+       aes(x = x, y = y, color = Color,
            alpha = T_min)) +
+  geom_label(data = plot_locations,
+             aes(label = Location), color = "black", alpha = .5) +
   geom_path(size = 2, color = "white", alpha = 1) +
-  geom_path(size = 2, color = "#4d4dff") +
+  geom_path(size = 2) +
+  scale_color_identity() +
   scale_alpha_continuous(range = c(0.2, 0.9)) + 
-  geom_point(aes(size = T_length), color = "#FF4040") +
-  geom_label(aes(label = Location), color = "black", alpha = .5) +
+  # geom_point(aes(size = T_length), color = "#FF4040") +
   facet_grid(.~ Loc_map) +
   coord_fixed(xlim = c(-10, 10), ylim = c(-10, 10)) + 
   theme_dark()
