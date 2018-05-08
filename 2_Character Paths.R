@@ -63,9 +63,10 @@ character_paths_map <- movie %>%
 
 ggplot(character_paths_map %>% filter(Character == "GRANT"), 
        aes(x = x, y = y,
-           color = T_min)) +
-  geom_path(size = 2, color = "white") +
-  geom_path(size = 2, alpha = 0.5) +
+           alpha = T_min)) +
+  geom_path(size = 2, color = "white", alpha = 1) +
+  geom_path(size = 2, color = "#4d4dff") +
+  scale_alpha_continuous(range = c(0.2, 0.9)) + 
   geom_point(aes(size = T_length), color = "#FF4040") +
   geom_label(aes(label = Location), color = "black", alpha = .5) +
   facet_grid(.~ Loc_map) +
