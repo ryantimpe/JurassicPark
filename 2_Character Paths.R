@@ -62,12 +62,13 @@ character_paths_map <- movie %>%
 
 plot_locations <- character_paths_map %>% 
   select(Location, Loc_map, x, y) %>% 
-  distinct()
+  distinct() %>% 
+  mutate(Character = "ALL")
 
-ggplot(character_paths_map %>% filter(Character %in% c("GRANT", "ELLIE")), 
-       aes(x = x, y = y, color = Color,
+ggplot(character_paths_map %>% filter(Character %in% c("GRANT"), Loc_map == "Isla Nublar"), 
+       aes(x = x, y = y, color = Color, group = Character,
            alpha = T_min)) +
-  geom_label(data = plot_locations,
+  geom_label(data = plot_locations%>% filter(Loc_map == "Isla Nublar"),
              aes(label = Location), color = "black", alpha = .5) +
   geom_path(size = 2, color = "white", alpha = 1) +
   geom_path(size = 2) +
@@ -77,3 +78,27 @@ ggplot(character_paths_map %>% filter(Character %in% c("GRANT", "ELLIE")),
   facet_grid(.~ Loc_map) +
   coord_fixed(xlim = c(-10, 10), ylim = c(-10, 10)) + 
   theme_dark()
+
+#prep data for D3
+
+character_paths_map_D3 <- character_paths_map #%>% 
+  #complete(Character, nesting(Loc_map, Location, x, y))
+
+
+dat_test <- character_paths_map_D3 %>% 
+  filter(Character == "GRANT", Loc_map == "Isla Nublar") %>% 
+  arrange(T_min)
+
+write.csv(dat_test, "CharacterPaths.csv", row.names = FALSE)
+
+map_test <- character_paths_map_D3 %>% 
+  filter(Loc_map == "Isla Nublar") %>% 
+  select(Location, Loc_map, x, y) %>% 
+  distinct()
+
+write.csv(map_test, "MapLocations.csv", row.names = FALSE)
+
+jsonlite::toJSON(map_test)
+
+
+saveRDS(character_paths_map, file = "CharacterPaths.RDS")
