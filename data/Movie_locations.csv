@@ -1,36 +1,38 @@
-Location,Location2,Loc_map,Loc_x1,Loc_y1,Loc_x2,Loc_y2,Loc_x3,Loc_y3
-"Badlands, near Snakewater Montana",Dig site,1,-6,8,NA,NA,NA,NA
-"Badlands, near Snakewater Montana",Trailer,1,-6,8,NA,NA,NA,NA
-"Badlands, near Snakewater Montana",Under tent,1,-6,8,NA,NA,NA,NA
-Isla Nublar,Big tree in clearing,2,-6,-2,4,0,NA,NA
-Isla Nublar,Brachiosaurus hill,2,-6,-2,-2,-3,NA,NA
-Isla Nublar,Dilophosaurus paddock,2,-6,-2,1,4,NA,NA
-Isla Nublar,East dock,2,-6,-2,6,-1,NA,NA
-Isla Nublar,Fields,2,-6,-2,2,1,NA,NA
-Isla Nublar,Gates,2,-6,-2,-1,-1,NA,NA
-Isla Nublar,Helicopter,2,-6,-2,-1,-6,NA,NA
-Isla Nublar,Landing pad,2,-6,-2,-1,-6,NA,NA
-Isla Nublar,Maintenance shed,2,-6,-2,-6,-1,NA,NA
-Isla Nublar,Park fence,2,-6,-2,-2,-2,NA,NA
-Isla Nublar,Road to docks,2,-6,-2,0.75,3.75,NA,NA
-Isla Nublar,The cars,2,-6,-2,4,3,NA,NA
-Isla Nublar,Triceratops exhibit,2,-6,-2,4,5,NA,NA
-Isla Nublar,Tyrannosaur paddock,2,-6,-2,4,3,NA,NA
-Isla Nublar,Tyrannosaur paddock | Restroom,2,-6,-2,4,3,NA,NA
-Isla Nublar,Velociraptor paddock,2,-6,-2,-5,0,NA,NA
-"Mano de dios amber mine, Dominican Republic",Inside mine,1,5,0,NA,NA,NA,NA
-"Mano de dios amber mine, Dominican Republic",Outside mine,1,5,0,NA,NA,NA,NA
-Open sea,Helicopter,1,-4,-3,NA,NA,NA,NA
-"San Jose, Costa Rica",Cafe,1,-3,-2,NA,NA,NA,NA
-Visitor's Center,Air duct,3,-6,-2,-4,2,6,4
-Visitor's Center,Bunker,3,-6,-2,-4,2,-6,8
-Visitor's Center,Control room,3,-6,-2,-4,2,0,4
-Visitor's Center,Embryo freezer,3,-6,-2,-4,2,6,8
-Visitor's Center,Kitchen,3,-6,-2,-4,2,8,-2
-Visitor's Center,Lobby,3,-6,-2,-4,2,0,-4
-Visitor's Center,Outside,3,-6,-2,-4,2,0,-8
-Visitor's Center,Presentation room,3,-6,-2,-4,2,-6,-4
-Visitor's Center,Restaurant,3,-6,-2,-4,2,8,-6
-Visitor's Center,Show room,3,-6,-2,-4,2,-6,-4
-Visitor's Center,The lab,3,-6,-2,-4,2,-5.5,2
-Visitor's Center,The movie,3,-6,-2,-4,2,-6,-4
+Location,Location2,LocationLabel,Loc_map,Loc_x1,Loc_y1,Loc_x2,Loc_y2,Loc_x3,Loc_y3
+"Badlands, near Snakewater Montana",Dig site,Badlands,1,-6,8,NA,NA,NA,NA
+"Badlands, near Snakewater Montana",Trailer,NA,1,-6,8,NA,NA,NA,NA
+"Badlands, near Snakewater Montana",Under tent,NA,1,-6,8,NA,NA,NA,NA
+Isla Nublar,Isla Nublar,Isla Nublar,2,-6,8,NA,NA,NA,NA
+Isla Nublar,Big tree in clearing,NA,2,-6,-2,4,0,NA,NA
+Isla Nublar,Brachiosaurus hill,Brachiosaurus,2,-6,-2,-2,-2,NA,NA
+Isla Nublar,Dilophosaurus paddock,Dilophosaurus,2,-6,-2,0.5,4,NA,NA
+Isla Nublar,East dock,NA,2,-6,-2,6,-1,NA,NA
+Isla Nublar,Fields,Gallimimus,2,-6,-2,0,0,NA,NA
+Isla Nublar,Gates,NA,2,-6,-2,-2,3.5,NA,NA
+Isla Nublar,Helicopter,NA,2,-6,-2,-1,-6,NA,NA
+Isla Nublar,Landing pad,Landing pad,2,-6,-2,0.5,-7,NA,NA
+Isla Nublar,Maintenance shed,NA,2,-6,-2,-5,0,NA,NA
+Isla Nublar,Park fence,NA,2,-6,-2,-1.5,1.5,NA,NA
+Isla Nublar,Road to docks,NA,2,-6,-2,0.75,3.75,NA,NA
+Isla Nublar,The cars,NA,2,-6,-2,4,2.75,NA,NA
+Isla Nublar,Triceratops exhibit,Triceratops,2,-6,-2,4,5.25,NA,NA
+Isla Nublar,Tyrannosaur paddock,T. rex,2,-6,-2,4,3,NA,NA
+Isla Nublar,Tyrannosaur paddock | Restroom,NA,2,-6,-2,4,2.5,NA,NA
+Isla Nublar,Velociraptor paddock,Raptors,2,-6,-2,-4,1.25,NA,NA
+Isla Nublar,Visitor's Center,Visitor's Center,3,-6,-2,-4,3,NA,NA
+"Mano de dios amber mine, Dominican Republic",Inside mine,DR,1,5,0,NA,NA,NA,NA
+"Mano de dios amber mine, Dominican Republic",Outside mine,DR,1,5,0,NA,NA,NA,NA
+Open sea,Helicopter,NA,1,-4,-3,NA,NA,NA,NA
+"San Jose, Costa Rica",Cafe,Costa Rica,1,-3,-2,NA,NA,NA,NA
+Visitor's Center,Air duct,NA,3,-6,-2,-4,3,6,4
+Visitor's Center,Bunker,Bunker,3,-6,-2,-4,3,-6,8
+Visitor's Center,Control room,Control room,3,-6,-2,-4,3,0,4
+Visitor's Center,Embryo freezer,Embryos,3,-6,-2,-4,3,6,8
+Visitor's Center,Kitchen,Kitchen,3,-6,-2,-4,3,8,-2
+Visitor's Center,Lobby,NA,3,-6,-2,-4,3,0,-4
+Visitor's Center,Outside,NA,3,-6,-2,-4,3,0,-8
+Visitor's Center,Presentation room,Mr. DNA,3,-6,-2,-4,3,-6,-4
+Visitor's Center,Restaurant,NA,3,-6,-2,-4,3,8,-6
+Visitor's Center,Show room,NA,3,-6,-2,-4,3,-6,-4
+Visitor's Center,The lab,NA,3,-6,-2,-4,3,-5.5,2
+Visitor's Center,The movie,NA,3,-6,-2,-4,3,-6,-4

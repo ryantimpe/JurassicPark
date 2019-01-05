@@ -10,6 +10,11 @@ var yScale = d3.scaleLinear().domain([-10, 10]).range([height, 0]);
 
 var datMap = [{"Location":"Big tree in clearing","Loc_map":"Isla Nublar","x":4,"y":0},{"Location":"Brachiosaurus hill","Loc_map":"Isla Nublar","x":-2,"y":-3},{"Location":"Dilophosaurus paddock","Loc_map":"Isla Nublar","x":1,"y":4},{"Location":"Fields","Loc_map":"Isla Nublar","x":2,"y":1},{"Location":"Gates","Loc_map":"Isla Nublar","x":-1,"y":-1},{"Location":"Landing pad","Loc_map":"Isla Nublar","x":-1,"y":-6},{"Location":"Maintenance shed","Loc_map":"Isla Nublar","x":-6,"y":-1},{"Location":"Park fence","Loc_map":"Isla Nublar","x":-2,"y":-2},{"Location":"Road to docks","Loc_map":"Isla Nublar","x":0.75,"y":3.75},{"Location":"The cars","Loc_map":"Isla Nublar","x":4,"y":3},{"Location":"Triceratops exhibit","Loc_map":"Isla Nublar","x":4,"y":5},{"Location":"Tyrannosaur paddock","Loc_map":"Isla Nublar","x":4,"y":3},{"Location":"Tyrannosaur paddock | Restroom","Loc_map":"Isla Nublar","x":4,"y":3},{"Location":"Velociraptor paddock","Loc_map":"Isla Nublar","x":-5,"y":0},{"Location":"Visitor's Center","Loc_map":"Isla Nublar","x":-4,"y":2}];
 
+//d3.html("C:/Users/ryant/Documents/808Projects/OneOffs/JurassicPark/images/IslaNublar600.svg", data => {console.log(data)});
+
+d3.html("/images/IslaNublar600.svg", data => {console.log(data)});
+
+
 d3.select("svg").selectAll("circle.loc")
   .data(datMap)
   .enter()

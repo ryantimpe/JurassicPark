@@ -6,21 +6,14 @@ output: html_document
 
 ```{r}
 library(r2d3)
-r2d3(data=c(0.3, 0.6, 0.8, 0.95, 0.40, 0.20), script = "barchart.js")
-```
+library(tidyverse)
+dat_raw <- readRDS("CharacterPaths.RDS")
 
-```{r setup}
-library(r2d3)
-bars <- c(10, 20, 30)
-```
+dat_test <- dat_raw %>% 
+  filter(Character == "GRANT", Loc_map == "Isla Nublar")
 
-```{d3 data=bars, options=list(color = 'orange')}
-svg.selectAll('rect')
-  .data(data)
-  .enter()
-    .append('rect')
-      .attr('width', function(d) { return d * 10; })
-      .attr('height', '20px')
-      .attr('y', function(d, i) { return i * 22; })
-      .attr('fill', options.color);
+write.csv(dat_test, "CharacterPaths.csv", row.names = FALSE)
+
+
+r2d3(data=dat_test, script = "charmap_v1.js")
 ```

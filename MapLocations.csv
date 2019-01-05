@@ -1,16 +1,16 @@
-"Location","Loc_map","x","y"
-"Big tree in clearing","Isla Nublar",4,0
-"Brachiosaurus hill","Isla Nublar",-2,-3
-"Dilophosaurus paddock","Isla Nublar",1,4
-"Fields","Isla Nublar",2,1
-"Gates","Isla Nublar",-1,-1
-"Landing pad","Isla Nublar",-1,-6
-"Maintenance shed","Isla Nublar",-6,-1
-"Park fence","Isla Nublar",-2,-2
-"Road to docks","Isla Nublar",0.75,3.75
-"The cars","Isla Nublar",4,3
-"Triceratops exhibit","Isla Nublar",4,5
-"Tyrannosaur paddock","Isla Nublar",4,3
-"Tyrannosaur paddock | Restroom","Isla Nublar",4,3
-"Velociraptor paddock","Isla Nublar",-5,0
-"Visitor's Center","Isla Nublar",-4,2
+Location,Loc_map,x,y
+Big tree in clearing,Isla Nublar,4,0
+Brachiosaurus hill,Isla Nublar,-2,-3
+Dilophosaurus paddock,Isla Nublar,1,4
+Fields,Isla Nublar,2,1
+Gates,Isla Nublar,-1,-1
+Landing pad,Isla Nublar,-1,-6
+Maintenance shed,Isla Nublar,-6,-1
+Park fence,Isla Nublar,-2,-2
+Road to docks,Isla Nublar,0.75,3.75
+The cars,Isla Nublar,4,2.75
+Triceratops exhibit,Isla Nublar,4,5
+Tyrannosaur paddock,Isla Nublar,4,3
+Tyrannosaur paddock | Restroom,Isla Nublar,4,2.5
+Velociraptor paddock,Isla Nublar,-5,0
+Visitor's Center,Isla Nublar,-4,2
