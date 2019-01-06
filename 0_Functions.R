@@ -1,9 +1,9 @@
 library(tidyr)
 
 #1 SCALE IMAGE ----
-scale_outline <- function(image, img_size){
+scale_outline <- function(image, img_size, outline_name){
   #Convert image to a data frame with RGB values
-  img <- image[, , 4] %>% 
+  img <- image %>% 
     as.data.frame() %>% 
     mutate(y=row_number())%>% 
     gather(x, value, -y) %>% 
@@ -46,7 +46,8 @@ scale_outline <- function(image, img_size){
     #Center around 0
     mutate(x = x - round(median(x)),
            y = y - round(median(y))) %>% 
-    filter(value > 0)
+    filter(value > 0.15) %>% 
+    mutate(Loc_map = outline_name)
   
   out_list <- list()
   out_list[["Img_scaled"]] <- img2
